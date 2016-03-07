@@ -1,0 +1,12 @@
+﻿<Window x:Class="EditableItemsExample.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:w="clr-namespace:EditableItemsExample"
+        Title="WpfPlayground" Width="900" Height="600" x:Name="TestWindow">
+	<Window.Resources>
+		<DataTemplate DataType="{x:Type w:EditableItem}">
+			<Label Width="{Binding Path=Bounds.Width, Mode=TwoWay}" Height="{Binding Path=Bounds.Height, Mode=TwoWay}" Background="Bisque">Hi</Label>
+		</DataTemplate>
+	</Window.Resources>
+	<w:EditableItemsPanel />
+</Window>
